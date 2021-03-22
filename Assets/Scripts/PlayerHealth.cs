@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int playerHealth = 3;
+
+    public Text playerHealthText;
 
     void Update()
     {
@@ -21,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
         {
             Death();
         }
+        playerHealthText.text = "Health: " + playerHealth;
     }
 
     public void ApplyDamage()
